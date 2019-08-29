@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const OkrUserSchema = new Schema({
@@ -12,4 +12,4 @@ const OkrUserSchema = new Schema({
   }
 });
 
-export default mongoose.model("okrUser", OkrUserSchema);
+export default mongoose.model('okrUser', OkrUserSchema);

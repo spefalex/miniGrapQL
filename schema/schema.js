@@ -1,9 +1,5 @@
-import {
-    makeExecutableSchema
-} from 'graphql-tools';
-import {
-    resolvers
-} from '../resolvers/resolvers';
+import { makeExecutableSchema } from 'graphql-tools';
+import { resolvers } from '../resolvers/resolvers';
 //requetty
 const typeDefs = `
 
@@ -16,16 +12,16 @@ type Product {
     _id: ID!
     username: String!
     password: String!
-    
+
    }
-  
+
 type Query {
   allProducts: [Product],
   getProductById(_id: ID!): Product,
   allUsers: [OkrUser]
   loginUser(username:String!,password:String!): [OkrUser],
  }
- 
+
  input ProductInput {
     title: String!
     qty: Int
@@ -43,10 +39,9 @@ input OkrUserInput {
    }
 `;
 
-
 const schema = makeExecutableSchema({
-    typeDefs,
-    resolvers
+  typeDefs,
+  resolvers
 });
 
 export default schema;
